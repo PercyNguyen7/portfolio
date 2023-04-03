@@ -12,10 +12,12 @@
 <body>
     <svg class="noise-texture" viewBox="0 0 243 243">
         <filter id="noiseFilter">
-            <feTurbulence type="franctalNoise" baseFrequency="10"></feTurbulence>
+            <feTurbulence baseFrequency="10000"></feTurbulence>
         </filter>
-        <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+        <rect class="rect-noise" filter="url(#noiseFilter)" />
     </svg>
+
+    <!-- <div class="noise-texture"></div> -->
     <nav class="primary-nav">
 
         <div class="nav-logo">
@@ -25,9 +27,9 @@
         <span class="nav-slogan ff-biko-bold">SAY <span class="ff-sans-light-italic"> HI</span> </span>
 
         <div class="apps-icons">
-            <a class="linkedin-icon"></a>
-            <a class="github-icon"></a>
-            <a class="ig-icon"></a>
+            <a class="linkedin-icon clickable"></a>
+            <a class="github-icon clickable"></a>
+            <a class="ig-icon clickable"></a>
 
 
         </div>
@@ -47,18 +49,20 @@
         <div class="logo-name"></div>
     </div>
 
+    <div class="page-title ff-sans-regular">Homepage     
+    </div>
 
     <section class="sect-1">
 
         <div class="grid-wrapper">
-            <div class="red-line"></div>
+            <div class="black-line"></div>
 
             <div class="title-1 ">
                 <h2 class="red-rect ff-biko-bold">I</h2>
                 <h2 class="ff-biko-bold">01</h2>
                 <!-- <div class="info-wrapper"> -->
                 <!-- <div class="arrow-down"></div> -->
-                <h3 class="ff-biko-bold">About Me</h3>
+                <h3 class="ff-biko-bold">About Percy</h3>
                 <!-- </div> -->
             </div>
             <h4 class=" column-3-7 ff-biko-regular">Web Design & Developer</h4>
@@ -82,14 +86,14 @@
                 </div>
 
 
-                <div class="profile-me-img">
+                <!-- <div class="profile-me-img">
                     <div class="top-square"></div>
                     <div class="bottom-square"></div>
-                </div>
+                </div> -->
             </div>
 
 
-            <div class="red-line-2"></div>
+            <div class="black-line-2"></div>
 
         </div>
     </section>
@@ -109,29 +113,104 @@
 
         <div class="works-slide">
             <div class="box-wrapper clickable">
-                <div class="box"></div>
+                <div class="box">
+                    <img src="assets/images/works/racistAlgorithm.png" alt="">
+                </div>
+                <span class="ff-biko-regular">2022</span>
+            </div>
+            <div class="box-wrapper clickable">
+                <div class="box">
+                    <img src="assets/images/works/aiOrHuman.png" alt="">
+                </div>
                 <span class="ff-biko-regular">2023</span>
             </div>
             <div class="box-wrapper clickable">
-                <div class="box"></div>
+                <div class="box">
+                    <img src="assets/images/works/humanAlgo.png" alt="">
+                </div>
                 <span class="ff-biko-regular">2022</span>
             </div>
             <div class="box-wrapper clickable">
-                <div class="box"></div>
+                <div class="box">
+                    <img src="assets/images/works/cgd-banner.png" alt="">
+                </div>
                 <span class="ff-biko-regular">2022</span>
             </div>
             <div class="box-wrapper clickable">
-                <div class="box"></div>
+                <div class="box">
+                    <img src="assets/images/works/magicBall.png" alt="">
+                </div>
                 <span class="ff-biko-regular">2022</span>
             </div>
             <div class="box-wrapper clickable">
-                <div class="box"></div>
+                <div class="box">
+                    <img src="assets/images/works/old-portfolio-banner.png" alt="">
+                </div>
                 <span class="ff-biko-regular">2022</span>
             </div>
+
         </div>
 
     </section>
+    <section class="sect-3">
+        
+    
+        <div class="grid-wrapper">
+            <div class="black-line"></div>
+            <div class="title-3">
+                <div class="">
+                    <h2 class="red-rect ff-biko-bold">I</h2>
 
+                    <h2 class="ff-biko-bold">03</h2>
+                    <div class="arrow-down"></div>
+
+                </div>
+                <!-- <div class="info-wrapper"> -->
+                <!-- <div class="arrow-down"></div> -->
+                <h3 class="ff-biko-bold">Playground</h3>
+                <div class="ff-biko-bold">
+                    <!-- <h4>Graphic Design</h4>
+                    <h4>3D Modelling</h4> -->
+                </div>
+                <!-- </div> -->
+            </div>
+
+
+            <div class="playground-wrapper">
+                <img src="assets/images/playground/facial-expressions.png">
+             
+               
+                <img src="assets/images/playground/godric_poster.png">
+                <img src="assets/images/playground/PercyInes_Environment_Render.png">
+               
+                <img src="assets/images/playground/biodiversity-orthogonal.jpg">
+                
+                <img src="assets/images/playground/war.png">
+                <img src="assets/images/playground/biodiversity-diagonal.jpg">
+                <img src="assets/images/playground/figment-imagination.png">
+                <img src="assets/images/playground/robot.jpg">
+                <img src="assets/images/playground/fasa-2.png">
+                <img src="assets/images/playground/walk-the-talk.png">
+                <img src="assets/images/playground/awaken.png">
+            
+    
+            </div>
+            <div class="black-line-2"></div>
+        </div>
+      
+        <!-- <div class="playground-area">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item1"></div>
+            <div class="item item3"></div>
+            <div class="item item2"></div>
+            <div class="item item1"></div>
+            <div class="item item1"></div>
+        </div> -->
+    
+       
+
+    </section>
     <section class="sect-4">
         <div class="grid-wrapper">
             <div class="title-4">
@@ -161,10 +240,12 @@
             </div>
 
             <div class="contact-icons ff-biko-bold">
-                <div class="icon clickable">Instagram</div>
-                <div class="icon clickable">LinkedIn</div>
-                <div class="icon clickable">GitHub</div>
                 <div class="icon clickable">Email</div>
+                <div class="icon clickable">GitHub</div>
+                <div class="icon clickable">LinkedIn</div>
+                <div class="icon clickable">Instagram</div>
+
+
 
             </div>
 
