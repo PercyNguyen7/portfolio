@@ -1,6 +1,35 @@
 const innerCursor = document.querySelector('.inner-cursor');
 const outerCursor = document.querySelector('.outer-cursor');
 
+
+
+const designToggle = document.querySelector('.design-toggle');
+const threeDToggle = document.querySelector('.threeD-toggle');
+const illustrationToggle = document.querySelector('.illustration-toggle');
+
+const illustrationWorks = document.querySelectorAll(".illustration-works");
+const threeDWorks = document.querySelectorAll(".threeD-works");
+const designWorks = document.querySelectorAll(".design-works");
+
+designToggle.addEventListener('click',()=>{
+  designToggle.classList.toggle('active');
+for (let i = 0; i <outerCursor < designWorks.length; i++ ){
+    designWorks[i].classList.toggle('hidden');
+}
+});
+
+threeDToggle.addEventListener('click',()=>{
+  threeDToggle.classList.toggle('active');
+for (let i = 0; i <outerCursor < threeDWorks.length; i++ ){
+    threeDWorks[i].classList.toggle('hidden');
+}
+});
+illustrationToggle.addEventListener('click',()=>{
+  illustrationToggle.classList.toggle('active');
+for (let i = 0; i <outerCursor < illustrationWorks.length; i++ ){
+    illustrationWorks[i].classList.toggle('hidden');
+}
+});
 document.addEventListener('mousemove',moveCursor);
 
 let normCursorDiff = 0;
@@ -53,23 +82,41 @@ function moveCursor(e){
 
     // console.log(x,y);
 }
+
+
+
+
 const headings = Array.from(document.querySelectorAll(".clickable"));
 headings.forEach((headings) => {
     headings.addEventListener("mouseover",()=>{
         normCursorDiff = growCursorDiff;
         innerCursor.classList.add("grow");
+        // innerCursor.innerHTML='CLICK';
         outerCursor.classList.add("grow");
         normCursor= growCursor
     });
     headings.addEventListener("mouseleave",()=>{
         innerCursor.classList.remove("grow");
         outerCursor.classList.remove("grow");
+        // innerCursor.innerHTML='';
         // innerCursor.style.transform = "scale(2)";
         normCursor=1;
-      
     });
 });
 
+slider.addEventListener("mouseover",()=>{
+  innerCursor.innerHTML='DRAG';
+  normCursorDiff = growCursorDiff;
+        innerCursor.classList.add("grow");
+ outerCursor.classList.add("grow");
+        normCursor= growCursor
+})
+slider.addEventListener("mouseleave",()=>{
+  innerCursor.classList.remove("grow");
+  outerCursor.classList.remove("grow");
+  innerCursor.innerHTML='';
+    normCursor=1;
+})
 let lastScrollTop = 0;
 const navRight = document.querySelector('.nav-right')
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
