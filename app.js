@@ -13,20 +13,20 @@ const designWorks = document.querySelectorAll(".design-works");
 
 designToggle.addEventListener('click',()=>{
   designToggle.classList.toggle('active');
-for (let i = 0; i <outerCursor < designWorks.length; i++ ){
+for (let i = 0; i  < designWorks.length; i++ ){
     designWorks[i].classList.toggle('hidden');
 }
 });
 
 threeDToggle.addEventListener('click',()=>{
   threeDToggle.classList.toggle('active');
-for (let i = 0; i <outerCursor < threeDWorks.length; i++ ){
+for (let i = 0; i < threeDWorks.length; i++ ){
     threeDWorks[i].classList.toggle('hidden');
 }
 });
 illustrationToggle.addEventListener('click',()=>{
   illustrationToggle.classList.toggle('active');
-for (let i = 0; i <outerCursor < illustrationWorks.length; i++ ){
+for (let i = 0; i < illustrationWorks.length; i++ ){
     illustrationWorks[i].classList.toggle('hidden');
 }
 });
@@ -103,7 +103,7 @@ headings.forEach((headings) => {
         normCursor=1;
     });
 });
-
+let mouseDrag = false;
 slider.addEventListener("mouseover",()=>{
   innerCursor.innerHTML='DRAG';
   normCursorDiff = growCursorDiff;
@@ -112,11 +112,42 @@ slider.addEventListener("mouseover",()=>{
         normCursor= growCursor
 })
 slider.addEventListener("mouseleave",()=>{
+  
   innerCursor.classList.remove("grow");
   outerCursor.classList.remove("grow");
   innerCursor.innerHTML='';
     normCursor=1;
-})
+});
+
+
+const boxWrappers = document.querySelectorAll('.box-wrapper');
+
+
+slider.addEventListener('mousedown', () => mouseDrag = false);
+slider.addEventListener('mousemove', () => mouseDrag = true);
+// slider.addEventListener('mouseup', (e) => {
+//   if (mouseDrag){
+//     e.preventDefault();
+//     alert('sad')
+//   }
+// });
+
+for (let i = 0; i  < boxWrappers.length; i++ ){
+boxWrappers[i].addEventListener('click',(e)=>{
+  if (mouseDrag){
+    e.preventDefault();
+  }
+  });}
+
+
+function clickHandle(event){
+  
+   
+  
+    // ... additional code
+
+}
+
 let lastScrollTop = 0;
 const navRight = document.querySelector('.nav-right')
 // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
