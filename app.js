@@ -106,17 +106,18 @@ headings.forEach((headings) => {
 let mouseDrag = false;
 slider.addEventListener("mouseover",()=>{
   innerCursor.innerHTML='DRAG';
-  normCursorDiff = growCursorDiff;
-        innerCursor.classList.add("grow");
- outerCursor.classList.add("grow");
-        normCursor= growCursor
+//   normCursorDiff = growCursorDiff;
+//         innerCursor.classList.add("grow");
+//  outerCursor.classList.add("grow");
+//         normCursor= growCursor
 })
 slider.addEventListener("mouseleave",()=>{
   
-  innerCursor.classList.remove("grow");
-  outerCursor.classList.remove("grow");
+  // innerCursor.classList.remove("grow");
+  // outerCursor.classList.remove("grow");
+  // normCursor=1;
   innerCursor.innerHTML='';
-    normCursor=1;
+
 });
 
 
