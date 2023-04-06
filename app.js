@@ -1,8 +1,6 @@
 const innerCursor = document.querySelector('.inner-cursor');
 const outerCursor = document.querySelector('.outer-cursor');
 
-
-
 const designToggle = document.querySelector('.design-toggle');
 const threeDToggle = document.querySelector('.threeD-toggle');
 const illustrationToggle = document.querySelector('.illustration-toggle');
@@ -103,9 +101,16 @@ headings.forEach((headings) => {
         normCursor=1;
     });
 });
+let mouseOnProject = false;
 let mouseDrag = false;
 slider.addEventListener("mouseover",()=>{
+  if (!mouseOnProject){
   innerCursor.innerHTML='DRAG';
+
+  }
+  else if (mouseOnProject){
+    innerCursor.innerHTML = 'CLICK';
+  }
 //   normCursorDiff = growCursorDiff;
 //         innerCursor.classList.add("grow");
 //  outerCursor.classList.add("grow");
@@ -117,13 +122,22 @@ slider.addEventListener("mouseleave",()=>{
   // outerCursor.classList.remove("grow");
   // normCursor=1;
   innerCursor.innerHTML='';
-
 });
 
 
+
+
 const boxWrappers = document.querySelectorAll('.box-wrapper');
+for (let i = 0; i < boxWrappers.length; i++){
+  boxWrappers[i].addEventListener('mouseover', ()=>{
+    mouseOnProject = true;
 
+  })
+  boxWrappers[i].addEventListener('mouseleave', ()=>{
+    mouseOnProject = false;
+  })
 
+}
 slider.addEventListener('mousedown', () => mouseDrag = false);
 slider.addEventListener('mousemove', () => mouseDrag = true);
 // slider.addEventListener('mouseup', (e) => {

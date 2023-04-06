@@ -785,7 +785,7 @@ h1, h2, h3, h4{
     margin: 4rem 0;
  }
  .design-toggle, .threeD-toggle,.illustration-toggle{
-    /* border-radius: 40px; */
+    border-radius: 40px;
     font-size:calc(1rem + ((1.25vw - 0.48rem) * 1.3889));
     padding:1rem;
     background-color: #ffffff;
@@ -990,6 +990,9 @@ h1, h2, h3, h4{
     text-transform: initial;
   }
 
+  .clickable {
+    cursor: pointer;
+  }
   /* .icon{
     width: 4rem;
     height: 4rem;
