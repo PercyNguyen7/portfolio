@@ -91,33 +91,41 @@ headings.forEach((headings) => {
     headings.addEventListener("mouseover",()=>{
         normCursorDiff = growCursorDiff;
         innerCursor.classList.add("grow");
-        // innerCursor.innerHTML='CLICK';
+        // innerCursor.innerHTML='click';
         outerCursor.classList.add("grow");
         normCursor= growCursor
     });
     headings.addEventListener("mouseleave",()=>{
         innerCursor.classList.remove("grow");
         outerCursor.classList.remove("grow");
-        // innerCursor.innerHTML='';
+        innerCursor.innerHTML='';
         // innerCursor.style.transform = "scale(2)";
         normCursor=1;
     });
 });
+let workHovered = false;
 let mouseDrag = false;
 slider.addEventListener("mouseover",()=>{
-  innerCursor.innerHTML='DRAG';
+  if (!workHovered){
+    innerCursor.innerHTML='DRAG';
+    innerCursor.classList.add("no-bg");
+  } 
+  else {
+    innerCursor.innerHTML = 'Click';
+    innerCursor.classList.remove("no-bg");
+  }
 //   normCursorDiff = growCursorDiff;
 //         innerCursor.classList.add("grow");
 //  outerCursor.classList.add("grow");
 //         normCursor= growCursor
 })
 slider.addEventListener("mouseleave",()=>{
+  innerCursor.classList.remove("no-bg");
   
   // innerCursor.classList.remove("grow");
   // outerCursor.classList.remove("grow");
   // normCursor=1;
   innerCursor.innerHTML='';
-
 });
 
 
@@ -138,7 +146,16 @@ boxWrappers[i].addEventListener('click',(e)=>{
   if (mouseDrag){
     e.preventDefault();
   }
-  });}
+  });
+  boxWrappers[i].addEventListener('mouseover',(e)=>{
+    workHovered = true;
+    // innerCursor.innerHTML='Click';
+  }); 
+  boxWrappers[i].addEventListener('mouseleave',(e)=>{
+    workHovered = false;
+    // innerCursor.innerHTML='';
+    }); 
+}
 
 
 function clickHandle(event){
@@ -149,24 +166,24 @@ function clickHandle(event){
 
 }
 
-let lastScrollTop = 0;
-const navRight = document.querySelector('.nav-right')
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
-   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-//    console.log('scrolling')
-   if (st > lastScrollTop) {
-    if (!navRight.classList.contains('hidden')){
-        navRight.classList.add('hidden');
-        console.log('scrolling up')
-    }
-      // downscroll code
-   } else if (st < lastScrollTop) {
-    if (navRight.classList.contains('hidden')){
-        navRight.classList.remove('hidden');
-        console.log('scrolling down')
-    }
-      // upscroll code
-   } // else was horizontal scroll
-   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
+// let lastScrollTop = 0;
+// const navRight = document.querySelector('.nav-right')
+// // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+// window.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+//    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+// //    console.log('scrolling')
+//    if (st > lastScrollTop) {
+//     if (!navRight.classList.contains('hidden')){
+//         navRight.classList.add('hidden');
+//         console.log('scrolling up')
+//     }
+//       // downscroll code
+//    } else if (st < lastScrollTop) {
+//     if (navRight.classList.contains('hidden')){
+//         navRight.classList.remove('hidden');
+//         console.log('scrolling down')
+//     }
+//       // upscroll code
+//    } // else was horizontal scroll
+//    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
