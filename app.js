@@ -101,7 +101,6 @@ headings.forEach((headings) => {
         normCursor=1;
     });
 });
-<<<<<<< HEAD
 let workHovered = false;
 let mouseDrag = false;
 slider.addEventListener("mouseover",()=>{
@@ -112,17 +111,6 @@ slider.addEventListener("mouseover",()=>{
   else {
     innerCursor.innerHTML = 'Click';
     innerCursor.classList.remove("no-bg");
-=======
-let mouseOnProject = false;
-let mouseDrag = false;
-slider.addEventListener("mouseover",()=>{
-  if (!mouseOnProject){
-  innerCursor.innerHTML='DRAG';
-
-  }
-  else if (mouseOnProject){
-    innerCursor.innerHTML = 'CLICK';
->>>>>>> 8ebc15b9fb29e25de06f6b5a4832d740865b797f
   }
 //   normCursorDiff = growCursorDiff;
 //         innerCursor.classList.add("grow");
