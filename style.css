@@ -1056,6 +1056,9 @@ h1, h2, h3, h4{
     text-transform: initial;
   }
 
+  .clickable {
+    cursor: pointer;
+  }
   /* .icon{
     width: 4rem;
     height: 4rem;
