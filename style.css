@@ -272,7 +272,7 @@ h1,h2,h3,h4{
     /* display: block; */
     grid-column:2 / 8;
   
-    width: max-content;
+    /* width: max-content; */
     /* position: relative; */
     /* right:0.5rem;    */
     /* background-color: rgb(222, 222, 222); */
@@ -662,7 +662,7 @@ h1, h2, h3, h4{
 
 .playground-area{
     width: 100%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     flex-wrap: wrap;
     gap:1rem;
@@ -845,7 +845,9 @@ h1, h2, h3, h4{
     background: url(./assets/images/arrow-up.svg) center center / cover no-repeat;
  }
  
- 
+ .sect-3>.grid-wrapper>*{
+    /* border: 1px solid blue */
+}
 
   @media only screen and (max-width: 769px){
       .container .boxx{
@@ -883,6 +885,7 @@ h1, h2, h3, h4{
     }
     .sect-3>.grid-wrapper>*{
         padding: 0 2rem;
+     
     }
     .toggles-wrapper{
         
