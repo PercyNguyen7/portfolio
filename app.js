@@ -10,22 +10,49 @@ const threeDWorks = document.querySelectorAll(".threeD-works");
 const designWorks = document.querySelectorAll(".design-works");
 
 designToggle.addEventListener('click',()=>{
+  threeDToggle.classList.remove('active');
+  illustrationToggle.classList.remove('active');
   designToggle.classList.toggle('active');
+  for (let i = 0; i < threeDWorks.length; i++ ){
+    threeDWorks[i].classList.add('hidden');
+}
+for (let i = 0; i < illustrationWorks.length; i++ ){
+  illustrationWorks[i].classList.add('hidden');
+}
 for (let i = 0; i  < designWorks.length; i++ ){
     designWorks[i].classList.toggle('hidden');
 }
+
 });
 
 threeDToggle.addEventListener('click',()=>{
+  illustrationToggle.classList.remove('active');
+  designToggle.classList.remove('active');
   threeDToggle.classList.toggle('active');
+  for (let i = 0; i < illustrationWorks.length; i++ ){
+    illustrationWorks[i].classList.add('hidden');
+  }
+  for (let i = 0; i  < designWorks.length; i++ ){
+      designWorks[i].classList.add('hidden');
+  }
 for (let i = 0; i < threeDWorks.length; i++ ){
     threeDWorks[i].classList.toggle('hidden');
 }
 });
+
 illustrationToggle.addEventListener('click',()=>{
+  designToggle.classList.remove('active');
+  threeDToggle.classList.remove('active');
   illustrationToggle.classList.toggle('active');
-for (let i = 0; i < illustrationWorks.length; i++ ){
+  
+  for (let i = 0; i < illustrationWorks.length; i++ ){
     illustrationWorks[i].classList.toggle('hidden');
+  }
+  for (let i = 0; i  < designWorks.length; i++ ){
+      designWorks[i].classList.add('hidden');
+  }
+  for (let i = 0; i < threeDWorks.length; i++ ){
+    threeDWorks[i].classList.add('hidden');
 }
 });
 document.addEventListener('mousemove',moveCursor);
