@@ -55,6 +55,8 @@ illustrationToggle.addEventListener('click',()=>{
     threeDWorks[i].classList.add('hidden');
 }
 });
+
+
 document.addEventListener('mousemove',moveCursor);
 
 let normCursorDiff = 0;
@@ -192,14 +194,6 @@ boxWrappers[i].addEventListener('click',(e)=>{
     }); 
 }
 
-
-function clickHandle(event){
-  
-   
-  
-    // ... additional code
-
-}
 
 // let lastScrollTop = 0;
 // const navRight = document.querySelector('.nav-right')
