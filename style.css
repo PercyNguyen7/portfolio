@@ -490,13 +490,13 @@ h1,h2,h3,h4{
     transition: transform 0.2s 0.2s ease-in;
 }
 
-.cta-btn:hover,
-.cta-btn:hover .arrow-right,
-.cta-btn:hover .cta-phrase{
+
+.cta-btn:hover .arrow-right
+{
     transform:translateX(1rem);
 }
 .cta-btn:hover{
-    padding: 0.5rem 3rem 0.5rem 1rem;
+    /* padding: 0.5rem 3rem 0.5rem 1rem; */
     background-color: rgb(21, 21, 21);
 }
 /* .sect-1{
