@@ -62,8 +62,8 @@ document.addEventListener('mousemove',moveCursor);
 let normCursorDiff = 0;
 let growCursorDiff =0;
 
-let normCursor = 1;
-let growCursor = 1;
+let normCursor = 1.5;
+let growCursor = 1.5;
 
 const slider = document.querySelector('.works-slide');
 let mouseDown = false;
