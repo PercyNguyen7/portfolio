@@ -1522,4 +1522,23 @@ h1, h2, h3, h4{
 .red-letter{
     color: #880f0f;
 }
-/* .align-top{align-self:flex-start}; */
+
+
+::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #880f0f;
+    /* border-radius: 20px; */
+    border: 4px solid transparent;
+    background-clip: content-box;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #880f0f;
+  }
