@@ -638,7 +638,7 @@ h1,h2,h3,h4{
     linear-gradient(to top, #880f0f 0px, transparent 0px) 0 100%,
     linear-gradient(to top, #880f0f 7px, transparent 4px) 100% 100%;
   background-repeat: no-repeat;
-  background-size: 30px 30px;
+  background-size: 25px 25px;
 }
 
 h1, h2, h3, h4{
