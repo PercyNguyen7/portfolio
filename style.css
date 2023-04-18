@@ -1504,12 +1504,12 @@ h1, h2, h3, h4{
      } */
 }
 @media (pointer: coarse) {
-    .inner-cursor,
+    /* .inner-cursor,
     .inner-cursor.grow,
     .outer-cursor,
     .outer-cursor.grow{
     display: none;
-    }
+    } */
     .works-slide{
         overflow-x:scroll;
        
