@@ -570,7 +570,7 @@ h1,h2,h3,h4{
     aspect-ratio: 0.75;
     overflow: hidden;
     
-    background: url(./assets/images/card2.svg) center center / cover no-repeat;
+    background: url(./assets/images/card2.png) center center / cover no-repeat;
     /* transition: transform 0.2s ease-in-out; */
     box-shadow: 15px 15px #222222;
     transform-style: preserve-3d;
