@@ -40,9 +40,9 @@ designToggle.addEventListener('click',()=>{
       `<div class="playground-works "> 
         <img loading="lazy" src="${works.designSources[i]}"></div>`;
     }
-//   threeDToggle.classList.remove('active');
-//   illustrationToggle.classList.remove('active');
-//   designToggle.classList.toggle('active');
+  threeDToggle.classList.remove('active');
+  illustrationToggle.classList.remove('active');
+  designToggle.classList.toggle('active');
 //   for (let i = 0; i < threeDWorks.length; i++ ){
 //     threeDWorks[i].classList.add('hidden');
 // }
@@ -64,9 +64,10 @@ threeDToggle.addEventListener('click',()=>{
   }
  
 
-//   illustrationToggle.classList.remove('active');
-//   designToggle.classList.remove('active');
-//   threeDToggle.classList.toggle('active');
+  illustrationToggle.classList.remove('active');
+  designToggle.classList.remove('active');
+  threeDToggle.classList.toggle('active');
+
 //   for (let i = 0; i < illustrationWorks.length; i++ ){
 //     illustrationWorks[i].classList.add('hidden');
 //   }
@@ -86,9 +87,9 @@ illustrationToggle.addEventListener('click',()=>{
       `<div class="playground-works"> 
         <img loading="lazy" src="${works.illustrationSources[i]}"></div>`;
     }
-//   designToggle.classList.remove('active');
-//   threeDToggle.classList.remove('active');
-//   illustrationToggle.classList.toggle('active');
+  designToggle.classList.remove('active');
+  threeDToggle.classList.remove('active');
+  illustrationToggle.classList.toggle('active');
   
 //   for (let i = 0; i < illustrationWorks.length; i++ ){
 //     illustrationWorks[i].classList.toggle('hidden');

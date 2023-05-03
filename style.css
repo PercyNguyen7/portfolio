@@ -874,7 +874,7 @@ h1, h2, h3, h4{
     left:0;
     width: 0;
     height: 100%;
-    transition: all 0.3s ease-out;
+    transition: width 0.5s ease-in-out;
  }
  .design-toggle:hover::before, .threeD-toggle:hover::before, .illustration-toggle:hover::before{
     width: 100%;
