@@ -337,7 +337,7 @@ h1,h2,h3,h4{
     position:absolute;
     top: -2rem;
     left:0;
-    width:  clamp(2rem,6vw,4rem);
+    width:  clamp(2rem,4vw,4rem);
     aspect-ratio: 1;
     background: url(./assets/images/arrow-down.svg) center center / cover no-repeat;
     animation: hovering 2s ease-in-out infinite;
@@ -842,18 +842,12 @@ h1, h2, h3, h4{
     height: auto;  
 
  }  
- .playground-wrapper > div{    
-    margin-bottom: 5rem;
-    /* display:inline-block;    
-    margin-right: auto;    
-    margin-left: auto;   */
- }
+
  .toggles-wrapper{
     display: flex;
-    flex-direction: column;
-    width: max-content;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap:1rem;
-    
     margin: 2rem 0;
  }
  .design-toggle, .threeD-toggle,.illustration-toggle{
@@ -1002,7 +996,6 @@ h1, h2, h3, h4{
 
 .panning-sect{
     grid-column: 1/13;
-
 }
 
 .flex{ display:flex;}
@@ -1150,10 +1143,10 @@ h1, h2, h3, h4{
         left:0;
     }
     .sect-1>.grid-wrapper>*:not(.cta-btn,.promo-vid-wrapper){
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
     .sect-3>.grid-wrapper>*{
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
     .nav-right{
         display: none;
@@ -1175,6 +1168,14 @@ h1, h2, h3, h4{
         -webkit-column-count: 2;
         column-count:  2;
     }
+    .playground-works{
+        padding: 1rem;
+        border: 2px solid rgb(219, 219, 219);
+        background-color: #f3f3f3;
+    }
+    .playground-wrapper > div{    
+        margin-bottom: 5rem;
+     }
 }
 
 @media (min-width: 45em) {
@@ -1491,11 +1492,7 @@ h1, h2, h3, h4{
     display: none;
     /* transition: width 0.2s, height 0.2s, opacity 0.2s;  \dart449\exercises\ex3\ex3.html*/
 }
-.illustration-works, .design-works, .threeD-works{
-    padding: 1rem;
-    border: 2px solid rgb(219, 219, 219);
-    background-color: #f3f3f3;
-}
+
 
 @media (hover: hover) and (pointer: fine) {
     /* .design-toggle:hover, .threeD-toggle:hover, .illustration-toggle:hover{
