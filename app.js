@@ -12,21 +12,21 @@ const designWorks = document.querySelectorAll(".design-works");
 
 const playgroundWrapper = document.querySelector(`.playground-wrapper`);
 const works = {
-  threeDSources:[`assets/images/playground/3d/diorama.jpg`,
-`assets/images/playground/3d/facial-expressions.jpg`,
-`assets/images/playground/3d/godric-walk-cycle.jpg`,
-`assets/images/playground/3d/PercyInes_Environment_Render.jpg`,
-`assets/images/playground/3d/robot.jpg`],
-  designSources:[`assets/images/playground/design/godric_poster.jpg`,
-  `assets/images/playground/design/moonlit-masquerade.jpg`,
-  `assets/images/playground/design/war.png`,
-  `assets/images/playground/design/ccas_halloween.jpg`,
-  `assets/images/playground/design/biodiversity-diagonal.jpg`,
-  `assets/images/playground/design/biodiversity-orthogonal.jpg`],
-  illustrationSources:[`assets/images/playground/illustrations/awaken.jpg`,
-  `assets/images/playground/illustrations/walk-the-talk.jpg`,
-  `assets/images/playground/illustrations/out-of-reach.jpg`,
-  `assets/images/playground/illustrations/fasa-2.jpg`]
+  threeDSources:[`assets/images/playground/3d/diorama.webp`,
+`assets/images/playground/3d/facial-expressions.webp`,
+`assets/images/playground/3d/godric-walk-cycle.webp`,
+`assets/images/playground/3d/PercyInes_Environment_Render.webp`,
+`assets/images/playground/3d/robot.webp`],
+  designSources:[`assets/images/playground/design/godric_poster.webp`,
+  `assets/images/playground/design/moonlit-masquerade.webp`,
+  `assets/images/playground/design/war.webp`,
+  `assets/images/playground/design/ccas_halloween.webp`,
+  `assets/images/playground/design/biodiversity-diagonal.webp`,
+  `assets/images/playground/design/biodiversity-orthogonal.webp`],
+  illustrationSources:[`assets/images/playground/illustrations/awaken.webp`,
+  `assets/images/playground/illustrations/walk-the-talk.webp`,
+  `assets/images/playground/illustrations/out-of-reach.webp`,
+  `assets/images/playground/illustrations/fasa-2.webp`]
 }
 
 
