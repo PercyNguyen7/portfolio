@@ -10,52 +10,95 @@ const threeDWorks = document.querySelectorAll(".threeD-works");
 const designWorks = document.querySelectorAll(".design-works");
 
 
+const playgroundWrapper = document.querySelector(`.playground-wrapper`);
+const works = {
+  threeDSources:[`assets/images/playground/3d/diorama.jpg`,
+`assets/images/playground/3d/facial-expressions.jpg`,
+`assets/images/playground/3d/godric-walk-cycle.jpg`,
+`assets/images/playground/3d/PercyInes_Environment_Render.jpg`,
+`assets/images/playground/3d/robot.jpg`],
+  designSources:[`assets/images/playground/design/godric_poster.jpg`,
+  `assets/images/playground/design/moonlit-masquerade.jpg`,
+  `assets/images/playground/design/war.png`,
+  `assets/images/playground/design/ccas_halloween.jpg`,
+  `assets/images/playground/design/biodiversity-diagonal.jpg`,
+  `assets/images/playground/design/biodiversity-orthogonal.jpg`],
+  illustrationSources:[`assets/images/playground/illustrations/awaken.jpg`,
+  `assets/images/playground/illustrations/walk-the-talk.jpg`,
+  `assets/images/playground/illustrations/out-of-reach.jpg`,
+  `assets/images/playground/illustrations/fasa-2.jpg`]
+}
+
+
+const designSources= 
+
 
 designToggle.addEventListener('click',()=>{
-  threeDToggle.classList.remove('active');
-  illustrationToggle.classList.remove('active');
-  designToggle.classList.toggle('active');
-  for (let i = 0; i < threeDWorks.length; i++ ){
-    threeDWorks[i].classList.add('hidden');
-}
-for (let i = 0; i < illustrationWorks.length; i++ ){
-  illustrationWorks[i].classList.add('hidden');
-}
-for (let i = 0; i  < designWorks.length; i++ ){
-    designWorks[i].classList.toggle('hidden');
-}
+    playgroundWrapper.innerHTML =``;
+    for (let i = 0; i < works.designSources.length; i++){
+      playgroundWrapper.innerHTML += 
+      `<div class="playground-works "> 
+        <img loading="lazy" src="${works.designSources[i]}"></div>`;
+    }
+//   threeDToggle.classList.remove('active');
+//   illustrationToggle.classList.remove('active');
+//   designToggle.classList.toggle('active');
+//   for (let i = 0; i < threeDWorks.length; i++ ){
+//     threeDWorks[i].classList.add('hidden');
+// }
+// for (let i = 0; i < illustrationWorks.length; i++ ){
+//   illustrationWorks[i].classList.add('hidden');
+// }
+// for (let i = 0; i  < designWorks.length; i++ ){
+//     designWorks[i].classList.toggle('hidden');
+// }
 
 });
 
 threeDToggle.addEventListener('click',()=>{
-  illustrationToggle.classList.remove('active');
-  designToggle.classList.remove('active');
-  threeDToggle.classList.toggle('active');
-  for (let i = 0; i < illustrationWorks.length; i++ ){
-    illustrationWorks[i].classList.add('hidden');
+  playgroundWrapper.innerHTML =``;
+  for (let i = 0; i < works.threeDSources.length; i++){
+    playgroundWrapper.innerHTML += 
+    `<div class="playground-works"> 
+      <img loading="lazy" src="${works.threeDSources[i]}"></div>`;
   }
-  for (let i = 0; i  < designWorks.length; i++ ){
-      designWorks[i].classList.add('hidden');
-  }
-for (let i = 0; i < threeDWorks.length; i++ ){
-    threeDWorks[i].classList.toggle('hidden');
-}
+ 
+
+//   illustrationToggle.classList.remove('active');
+//   designToggle.classList.remove('active');
+//   threeDToggle.classList.toggle('active');
+//   for (let i = 0; i < illustrationWorks.length; i++ ){
+//     illustrationWorks[i].classList.add('hidden');
+//   }
+//   for (let i = 0; i  < designWorks.length; i++ ){
+//       designWorks[i].classList.add('hidden');
+//   }
+// for (let i = 0; i < threeDWorks.length; i++ ){
+//     threeDWorks[i].classList.toggle('hidden');
+// }
 });
 
 illustrationToggle.addEventListener('click',()=>{
-  designToggle.classList.remove('active');
-  threeDToggle.classList.remove('active');
-  illustrationToggle.classList.toggle('active');
+    playgroundWrapper.innerHTML =``;
+    playgroundWrapper.innerHTML =``;
+    for (let i = 0; i < works.illustrationSources.length; i++){
+      playgroundWrapper.innerHTML += 
+      `<div class="playground-works"> 
+        <img loading="lazy" src="${works.illustrationSources[i]}"></div>`;
+    }
+//   designToggle.classList.remove('active');
+//   threeDToggle.classList.remove('active');
+//   illustrationToggle.classList.toggle('active');
   
-  for (let i = 0; i < illustrationWorks.length; i++ ){
-    illustrationWorks[i].classList.toggle('hidden');
-  }
-  for (let i = 0; i  < designWorks.length; i++ ){
-      designWorks[i].classList.add('hidden');
-  }
-  for (let i = 0; i < threeDWorks.length; i++ ){
-    threeDWorks[i].classList.add('hidden');
-}
+//   for (let i = 0; i < illustrationWorks.length; i++ ){
+//     illustrationWorks[i].classList.toggle('hidden');
+//   }
+//   for (let i = 0; i  < designWorks.length; i++ ){
+//       designWorks[i].classList.add('hidden');
+//   }
+//   for (let i = 0; i < threeDWorks.length; i++ ){
+//     threeDWorks[i].classList.add('hidden');
+// }
 });
 
 
@@ -79,7 +122,7 @@ let startDragging = function (e) {
 let stopDragging = function (event) {
   mouseDown = false;
 };
-
+// Dragging to left
 slider.addEventListener('mousemove', (e) => {
   e.preventDefault();
   if(!mouseDown) { return; }
