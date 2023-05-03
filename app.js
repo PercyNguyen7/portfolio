@@ -30,8 +30,16 @@ const works = {
 }
 
 
-const designSources= 
+window.addEventListener('load',()=>{
+  playgroundWrapper.innerHTML =``;
+  for (let i = 0; i < works.designSources.length; i++){
+    playgroundWrapper.innerHTML += 
+    `<div class="playground-works "> 
+      <img loading="lazy" src="${works.designSources[i]}"></div>`;
+  }
+})
 
+const designSources= 
 
 designToggle.addEventListener('click',()=>{
     playgroundWrapper.innerHTML =``;
@@ -62,7 +70,6 @@ threeDToggle.addEventListener('click',()=>{
     `<div class="playground-works"> 
       <img loading="lazy" src="${works.threeDSources[i]}"></div>`;
   }
- 
 
   illustrationToggle.classList.remove('active');
   designToggle.classList.remove('active');
