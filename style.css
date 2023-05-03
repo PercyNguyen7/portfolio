@@ -903,7 +903,7 @@ h1, h2, h3, h4{
     padding: 5rem 0;
     /* margin: 4rem auto; */
 }
-.promo-vid-wrapper video{
+.promo-vid-wrapper video, .promo-vid-wrapper iframe{
     width: 100%;
     height: 100%;
 }
