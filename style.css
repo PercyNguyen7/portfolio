@@ -446,15 +446,27 @@ h4 {
   margin: 2rem 1rem;
   grid-column: 4/8;
   width: max-content;
-  color: #d0d0d0;
   padding: 0.5rem 1rem;
-  background-color: var(--color-red);
+  background-color: #a3865f;
   font-size: calc(1.5rem + ((1vw - 0.48rem) * 1.3889));
   text-transform: uppercase;
   border-radius: 15px;
   /* cursor: pointer; */
   transition: all 0.2s 0.4s ease-in, background 0s ease-in;
 }
+.cta-btn:hover .arrow-right {
+  transform: translateX(1rem);
+}
+.cta-btn:hover {
+  /* padding: 0.5rem 3rem 0.5rem 1rem; */
+  background-color: rgb(24, 24, 24);
+}
+.cta-phrase {
+  color: rgb(221, 221, 221);
+  text-decoration: none;
+  transition: transform 0.2s 0.2s ease-in;
+}
+
 .case-study-wrapper {
   padding: 4rem 0;
 }
@@ -539,19 +551,7 @@ h4 {
     no-repeat;
   transition: transform 0.2s ease-in;
 }
-.cta-phrase {
-  color: #e7e7e7;
-  text-decoration: none;
-  transition: transform 0.2s 0.2s ease-in;
-}
 
-.cta-btn:hover .arrow-right {
-  transform: translateX(1rem);
-}
-.cta-btn:hover {
-  /* padding: 0.5rem 3rem 0.5rem 1rem; */
-  background-color: rgb(21, 21, 21);
-}
 /* .sect-1{
     margin-top:4rem;
 } */
@@ -619,10 +619,15 @@ h4 {
   aspect-ratio: 0.75;
   overflow: hidden;
 
-  background: url(./assets/images/card2.png) center center / cover no-repeat;
+  /* background: url(./assets/images/Percy_PFP.webp) center center / cover  no-repeat; */
   /* transition: transform 0.2s ease-in-out; */
   box-shadow: 15px 15px #222222;
   transform-style: preserve-3d;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .profile-img-wrapper:hover .profile-img:before {
@@ -639,7 +644,7 @@ h4 {
   color: #d0d0d0;
   transition: transform 0.1s ease-in-out;
   transform: translateX(-100%);
-  background: url(./assets/images/card.svg) center center / cover no-repeat;
+  background: url(./assets/images/card-v2.svg) center center / cover no-repeat;
 }
 
 .profile-img:hover {
@@ -1666,6 +1671,9 @@ footer .arrow-up {
 
 .text-right {
   text-align: right;
+}
+.text-red {
+  color: var(--color-red);
 }
 /* Mobile optimizations */
 @media (max-width: 768px) {
