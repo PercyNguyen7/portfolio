@@ -230,16 +230,16 @@ const observer = new IntersectionObserver((entries) => {
         entry.isIntersecting && entry.intersectionRatio > 0.1;
 
       // Update scroll indicator based on intersection
-      if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-        scrollIndicator.textContent = "Scroll to move horizontally →";
-        scrollIndicator.classList.add("horizontal");
-      } else if (entry.boundingClientRect.top > 0) {
-        scrollIndicator.textContent = "Scroll down ↓";
-        scrollIndicator.classList.remove("horizontal");
-      } else {
-        scrollIndicator.textContent = "Continue scrolling ↓";
-        scrollIndicator.classList.remove("horizontal");
-      }
+      // if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+      //   scrollIndicator.textContent = "Scroll to move horizontally →";
+      //   scrollIndicator.classList.add("horizontal");
+      // } else if (entry.boundingClientRect.top > 0) {
+      //   scrollIndicator.textContent = "Scroll down ↓";
+      //   scrollIndicator.classList.remove("horizontal");
+      // } else {
+      //   scrollIndicator.textContent = "Continue scrolling ↓";
+      //   scrollIndicator.classList.remove("horizontal");
+      // }
     }
   });
 }, observerOptions);
