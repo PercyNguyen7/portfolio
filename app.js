@@ -99,21 +99,23 @@ let stopDragging = function (event) {
   mouseDown = false;
 };
 // Dragging to left
-slider.addEventListener("mousemove", (e) => {
-  e.preventDefault();
-  if (!mouseDown) {
-    return;
-  }
-  const x = e.pageX - slider.offsetLeft;
-  const scroll = x - startX;
-  slider.scrollLeft = scrollLeft - scroll;
-});
+//******************
+// SLIDER DRAG
+// slider.addEventListener("mousemove", (e) => {
+//   e.preventDefault();
+//   if (!mouseDown) {
+//     return;
+//   }
+//   const x = e.pageX - slider.offsetLeft;
+//   const scroll = x - startX;
+//   slider.scrollLeft = scrollLeft - scroll;
+// });
 
 // Add the event listeners
-slider.addEventListener("mousedown", startDragging, false);
-slider.addEventListener("mouseup", stopDragging, false);
-slider.addEventListener("mouseleave", stopDragging, false);
-
+// slider.addEventListener("mousedown", startDragging, false);
+// slider.addEventListener("mouseup", stopDragging, false);
+// slider.addEventListener("mouseleave", stopDragging, false);
+//******************
 function moveCursor(e) {
   // let x = e.clientX;
   // let y = e.clientY;
@@ -150,39 +152,39 @@ headings.forEach((headings) => {
 });
 let workHovered = false;
 let mouseDrag = false;
-slider.addEventListener("mouseover", () => {
-  if (!workHovered) {
-    innerCursor.innerHTML = "DRAG";
-    innerCursor.classList.add("no-bg");
-  } else {
-    innerCursor.innerHTML = "Click";
-    innerCursor.classList.remove("no-bg");
-  }
-  //   normCursorDiff = growCursorDiff;
-  //         innerCursor.classList.add("grow");
-  //  outerCursor.classList.add("grow");
-  //         normCursor= growCursor
-});
-slider.addEventListener("mouseleave", () => {
-  innerCursor.classList.remove("no-bg");
+// slider.addEventListener("mouseover", () => {
+//   if (!workHovered) {
+//     innerCursor.innerHTML = "DRAG";
+//     innerCursor.classList.add("no-bg");
+//   } else {
+//     innerCursor.innerHTML = "Click";
+//     innerCursor.classList.remove("no-bg");
+//   }
+//   //   normCursorDiff = growCursorDiff;
+//   //         innerCursor.classList.add("grow");
+//   //  outerCursor.classList.add("grow");
+//   //         normCursor= growCursor
+// });
+// slider.addEventListener("mouseleave", () => {
+//   innerCursor.classList.remove("no-bg");
 
-  // innerCursor.classList.remove("grow");
-  // outerCursor.classList.remove("grow");
-  // normCursor=1;
-  innerCursor.innerHTML = "";
-});
+//   // innerCursor.classList.remove("grow");
+//   // outerCursor.classList.remove("grow");
+//   // normCursor=1;
+//   innerCursor.innerHTML = "";
+// });
 
-const boxWrappers = document.querySelectorAll(".box-wrapper");
-for (let i = 0; i < boxWrappers.length; i++) {
-  boxWrappers[i].addEventListener("mouseover", () => {
-    mouseOnProject = true;
-  });
-  boxWrappers[i].addEventListener("mouseleave", () => {
-    mouseOnProject = false;
-  });
-}
-slider.addEventListener("mousedown", () => (mouseDrag = false));
-slider.addEventListener("mousemove", () => (mouseDrag = true));
+// const boxWrappers = document.querySelectorAll(".box-wrapper");
+// for (let i = 0; i < boxWrappers.length; i++) {
+//   boxWrappers[i].addEventListener("mouseover", () => {
+//     mouseOnProject = true;
+//   });
+//   boxWrappers[i].addEventListener("mouseleave", () => {
+//     mouseOnProject = false;
+//   });
+// }
+// slider.addEventListener("mousedown", () => (mouseDrag = false));
+// slider.addEventListener("mousemove", () => (mouseDrag = true));
 // slider.addEventListener('mouseup', (e) => {
 //   if (mouseDrag){
 //     e.preventDefault();
@@ -190,23 +192,23 @@ slider.addEventListener("mousemove", () => (mouseDrag = true));
 //   }
 // });
 
-for (let i = 0; i < boxWrappers.length; i++) {
-  boxWrappers[i].addEventListener("click", (e) => {
-    if (mouseDrag) {
-      e.preventDefault();
-    }
-  });
-  boxWrappers[i].addEventListener("mouseover", (e) => {
-    workHovered = true;
-    // innerCursor.innerHTML='Click';
-  });
-  boxWrappers[i].addEventListener("mouseleave", (e) => {
-    workHovered = false;
-    // innerCursor.innerHTML='';
-  });
-}
+// for (let i = 0; i < boxWrappers.length; i++) {
+//   boxWrappers[i].addEventListener("click", (e) => {
+//     if (mouseDrag) {
+//       e.preventDefault();
+//     }
+//   });
+//   boxWrappers[i].addEventListener("mouseover", (e) => {
+//     workHovered = true;
+//     // innerCursor.innerHTML='Click';
+//   });
+//   boxWrappers[i].addEventListener("mouseleave", (e) => {
+//     workHovered = false;
+//     // innerCursor.innerHTML='';
+//   });
+// }
 
-const horizontalContainer = document.getElementById("horizontal-container");
+const horizontalContainer = document.getElementById("sect-2");
 const horizontalSections = document.getElementById("horizontal-sections");
 const scrollIndicator = document.getElementById("scroll-indicator");
 

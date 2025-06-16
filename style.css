@@ -276,6 +276,7 @@ h4 {
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 .title-2 {
   width: max-content;
@@ -324,7 +325,7 @@ h4 {
   font-weight: 600;
 }
 .align-right {
-  text-align: right;
+  text-align: center;
 }
 .title-3 h2 {
   position: relative;
@@ -721,7 +722,7 @@ h4 {
   cursor: grab;
 }
 .box-wrapper {
-  margin: 2rem 0;
+  margin: 1rem;
   cursor: pointer;
   display: block;
   -webkit-user-select: none;
@@ -730,21 +731,25 @@ h4 {
   -o-user-select: none;
   user-select: none;
 }
-.box-wrapper span {
+.box-detail-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box-detail-wrapper span {
   color: #000000;
   margin-top: 1rem;
   text-decoration: none;
+
   /* background-color: red; */
 }
 .box {
   user-select: none;
   display: block;
-  width: clamp(20rem, 30vw, 30rem);
-  height: clamp(20rem, 30vw, 30rem);
+  width: clamp(22rem, 40vw, 32rem);
+  height: clamp(22rem, 40vw, 32rem);
   aspect-ratio: 1;
-  background-color: black;
   position: relative;
-
   /* background: url(./assets/images/works/aiOrHuman.png) center center / cover no-repeat; */
   z-index: 1;
   transform-style: preserve-3d;
@@ -1564,9 +1569,8 @@ footer .arrow-up {
   position: sticky;
   top: 0;
   padding-top: 3rem;
-  min-height: 100vh;
+
   width: 100%;
-  /* padding-right: 10rem; */
   /* overflow: scroll; */
 }
 
@@ -1576,7 +1580,7 @@ footer .arrow-up {
   transition: none;
   gap: clamp(4rem, 4vw, 8rem);
   width: min-content;
-  padding-right: 10rem;
+  padding: 0 clamp(2rem, 30vw, 10rem);
   /* border: 2px solid green; */
 }
 
@@ -1620,9 +1624,13 @@ footer .arrow-up {
 /* Content boxes inside horizontal sections */
 .content-box {
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
   border-radius: 20px;
-  max-width: min(600px, 90vw);
+  color: black;
+  width: 100%;
+}
+.content-box span {
+  display: block;
 }
 
 .content-box h2 {
@@ -1656,12 +1664,11 @@ footer .arrow-up {
   background: rgba(255, 87, 34, 0.9);
 }
 
+.text-right {
+  text-align: right;
+}
 /* Mobile optimizations */
 @media (max-width: 768px) {
-  .horizontal-container {
-    height: 400vh; /* Reduce scroll distance on mobile */
-  }
-
   .content-box {
     border-radius: 15px;
     backdrop-filter: blur(5px);
@@ -1671,17 +1678,6 @@ footer .arrow-up {
     font-size: 0.8rem;
     padding: 8px 15px;
     bottom: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .horizontal-container {
-    height: 350vh; /* Even shorter on very small screens */
-  }
-
-  .content-box {
-    border-radius: 12px;
-    max-width: 95vw;
   }
 }
 
