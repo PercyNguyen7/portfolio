@@ -333,3 +333,6 @@ document.documentElement.style.scrollBehavior = "smooth";
 //    } // else was horizontal scroll
 //    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 // }, false);
+const copyrightTxt = document.querySelector("#copyright-txt");
+const currYear = new Date().getFullYear();
+copyrightTxt.textContent = `© ${currYear} Percy Nguyen`;
