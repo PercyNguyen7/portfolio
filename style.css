@@ -751,8 +751,9 @@ h4 {
 .box {
   user-select: none;
   display: block;
-  width: clamp(22rem, 40vw, 32rem);
-  height: clamp(22rem, 40vw, 32rem);
+  width: clamp(22rem, 40vh, 36rem);
+  height: clamp(22rem, 40vh, 36rem);
+  max-height: 65vh;
   aspect-ratio: 1;
   position: relative;
   /* background: url(./assets/images/works/aiOrHuman.png) center center / cover no-repeat; */
@@ -1573,7 +1574,7 @@ footer .arrow-up {
 .horizontal-wrapper {
   position: sticky;
   top: 0;
-  padding-top: 3rem;
+  padding-top: clamp(1rem, 3vh, 2rem);
 
   width: 100%;
   /* overflow: scroll; */
